@@ -1,0 +1,144 @@
+/* تخصيص الهيدر واسم الصفحة */
+header {
+    display: flex;
+    justify-content: center; /* لضبط اسم الصفحة في المنتصف */
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+header .logo h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* تخصيص الزر الخاص بعربة المشتريات */
+.cart-button {
+    position: absolute;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-button:hover {
+    background-color: #45a049;
+}
+
+/* تخصيص الشبكة لعرض المنتجات باستخدام Grid */
+.products {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* استخدم Grid لعرض المنتجات بشكل مرتب */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* تخصيص شكل كل منتج */
+.product {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    height: 300px; /* تحديد ارتفاع ثابت للمنتج */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* لضبط محتويات المنتج */
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* لتوحيد أبعاد الصور */
+    border-radius: 8px;
+}
+
+.product h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.product p {
+    font-size: 18px;
+    color: #777;
+}
+
+.product button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.product button:hover {
+    background-color: #45a049;
+}
+
+/* تخصيص عربة المشتريات */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px; /* بداية خارج الشاشة */
+    width: 400px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: right 0.3s ease; /* لتأثير الانتقال عند فتح السلة */
+    padding: 20px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-sidebar h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.cart-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.cart-sidebar li {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #ddd;
+}
+
+.cart-sidebar button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.cart-sidebar button:hover {
+    background-color: #45a049;
+}
+
+.cart-sidebar .close {
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    cursor: pointer;
+}
